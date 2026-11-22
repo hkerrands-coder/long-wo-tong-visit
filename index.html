@@ -441,9 +441,9 @@
   .steps b{color:var(--ink);font-weight:500;font-family:var(--serif);}
 
   /* —— Map —— */
-  .map-frame{
+  .map-frame{margin:26px 0 14px;}
+  .map-frame__stage{
     position:relative;
-    margin:26px 0 14px;
     border:1px solid rgba(142,109,69,.22);
     overflow:hidden;
     background:var(--lacquer-mid);
@@ -457,19 +457,24 @@
   }
   .map-frame .pin-label{
     position:absolute;
-    left:50%;bottom:16px;
+    left:50%;top:14px;
     transform:translateX(-50%);
-    max-width:calc(100% - 24px);
-    background:rgba(11,9,7,.88);
+    max-width:calc(100% - 20px);
+    background:rgba(11,9,7,.9);
     color:var(--gilt);
     border:1px solid rgba(196,165,116,.4);
     font-family:var(--serif);
     font-size:13px;
-    letter-spacing:.12em;
+    letter-spacing:.08em;
     padding:8px 14px;
     text-align:center;
-    line-height:1.4;
+    line-height:1.2;
+    white-space:nowrap;
     pointer-events:none;
+  }
+  .map-frame figcaption{
+    margin-top:12px;
+    padding:0 2px;
   }
   .map-links{
     font-family:var(--sans);
@@ -658,10 +663,11 @@
     .map-frame{margin:18px 0 12px;}
     .map-frame iframe{height:min(300px,70vw);}
     .map-frame .pin-label{
-      font-size:13px;
-      letter-spacing:.06em;
-      padding:7px 10px;
-      bottom:12px;
+      top:10px;
+      font-size:12px;
+      letter-spacing:.04em;
+      padding:7px 12px;
+      white-space:nowrap;
     }
     .map-links{font-size:12px;letter-spacing:.1em;line-height:1.7;}
 
@@ -847,14 +853,16 @@
         </div>
         <p class="route__lede">於地圖中確認柴灣工業城二期位置，亦可直接開啟導航應用，規劃即時路線。</p>
         <figure class="map-frame">
-          <iframe
-            title="龍和堂位置地圖 — 柴灣工業城二期"
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
-            allowfullscreen
-            src="https://maps.google.com/maps?q=22.2682318,114.2423825&amp;z=16&amp;hl=zh-TW&amp;output=embed">
-          </iframe>
-          <div class="pin-label">龍和堂 · 柴灣工業城二期</div>
+          <div class="map-frame__stage">
+            <iframe
+              title="龍和堂位置地圖 — 柴灣工業城二期"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              allowfullscreen
+              src="https://maps.google.com/maps?q=22.2682318,114.2423825&amp;z=16&amp;hl=zh-TW&amp;output=embed">
+            </iframe>
+            <div class="pin-label">龍和堂 · 柴灣工業城二期</div>
+          </div>
           <figcaption><span class="tag">Map</span><b>柴灣工業城二期</b> 香港柴灣永泰道70號</figcaption>
         </figure>
         <p class="map-links">
